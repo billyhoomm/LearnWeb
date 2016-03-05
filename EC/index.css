@@ -1,0 +1,46 @@
+@charset "utf-8";
+/* CSS Document */
+/*公用*/
+.comWidth{width:1000px; margin-left:auto; margin-right:auto;}
+.leftArea{float:left;}
+.rightArea{float:right;}
+
+/*topBar*/
+.topBar{height:37px; background-color:#F7F7F7; line-height:31px;}
+.collection{background:url(images/icon/collection.jpg) left center no-repeat; padding-left:19px; font-weight:bold;}
+.topBar a:hover{color:red;}
+/*logo*/
+.logoBar{height:85px; background-color:#1d7ad9;}
+.logo{padding-left:41px; padding-top:13px;}
+.fl{float:left;}
+.fr{float:right;}
+/*search*/
+.search_box{width:430px; padding-top:23px; padding-left:185px;}
+.search_text{width:350px; height:14px; line-height:10px; padding:11px 5px 10px 5px; background:#FFF;}
+.search_btn{width:70px; height:35px; font-size:14px; font-family:"Courier New", Courier, monospace;
+background-color:#F90; color:#FFF;}
+/*购物车*/
+.shopCar{width:145px; height:35px; background-color:#FF8C00; margin-top:23px; margin-right:59px;}
+.shopText{font-size:14px; font-family:"Courier New", Courier, monospace; color:#FFF; line-height:35px; width:87px; border-right:#E27A00 solid 1px; background:url(images/icon/shopcar.jpg) 10px center  no-repeat;text-indent:40px;}
+.shopNum{width:27px; height:35px; border-left:#FF9C01 solid 1px; font:14px/35px "Courier New", Courier, monospace; color:#FFF; background:url(images/icon/sj.jpg) 33px center no-repeat; text-align:center; padding-right:29px;} 
+/*导航*/
+.navBox{height:35px; background-color:#1369c0; color:#fff;}
+.shopClass{width:190px; position:relative;}
+.shopClass h3{text-align:center; line-height:35px;}
+.nav,.shopClass{font:"Courier New", Courier, monospace;}
+.nav{line-height:35px;}
+.nav li{float:left;}
+.nav a{height:35px; padding:0 35px; color:#fff; display:inline-block; font-weight:bold;}
+.nav .active{background-color:#4593fd;}
+/*弹出商品列表*/
+.shopClass_item .b{font-size:14px; font-weight:bold;}
+.shopClass_show{background-color:#4593fd; position:absolute; top:35px; left:0; width:100%;}
+.shopClass_item{padding:14px 10px; border-bottom:#3487f2 solid 1px; border-top:#5aa1fe solid 1px;}
+.shopClass_item dt{height:24px;}
+.shopClass_item a{color:#fff;}
+.shopClass_item .alink{text-decoration:underline; background-color:#0F0;}
+/*banner部分*/
+.banner_bar{width:810px; height:326px; float:right; position:relative; overflow:hidden;}
+.imgBox{width:1620px; height:326px; position:absolute; top:0; left:0;}
+.imgBox li{float:left;}
+.imgBox img{width:810px; height:326px; display:block;}
