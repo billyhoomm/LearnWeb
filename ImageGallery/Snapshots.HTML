@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN">
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>My dear M</title>
+  <link rel = "stylesheet" type = "text/css" href = "Snapshots.css" media = "screen"/>
+  <script>
+  function prepareGallery() {
+    if(!document.getElementsByTagName) return false;
+    if(!document.getElementById) return false;
+    if(!document.getElementById("imagegallery")) return false;
+    var gallery = document.getElementById("imagegallery");
+    var links = gallery.getElementsByTagName("a");
+    for( var i = 0; i<links.length; i++){
+      links[i].onclick = function(){
+        return showPic(this);
+        
+      }
+      
+    }
+  }
+  function showPic(whichpic) {
+    if(!document.getElementById("placeholder")) return true;
+  	var source = whichpic.getAttribute('href');
+  	var placeholder = document.getElementById('placeholder');
+  	placeholder.setAttribute("src", source);//对id=palcehoder的节点属性做出修改
+    if(!document.getElementById("description")) return false;
+  	var text = whichpic.getAttribute("title");
+  	var description = document.getElementById("description");
+  	description.firstChild.nodeValue = text;//利用nodeValue属性刷新P元素的文本内容
+    return false;
+  }
+  window.onload = function(){
+    prepareGallery();
+    win();
+  }
+  /*window.onload = countBodyChildren;
+    function countBodyChildren() {
+  	var body_element = document.getElementsByTagName('body')[0];
+  	alert (body_element.nodeType);//或者.childNodes.length是显示全体子元素
+    }*/
+  function popUp(winurl){
+    window.open(winurl,"popUp","width = 320,height = 480");//点击窗口onclick = "popUp(this.href); return false;"
+  }
+  function win(){
+    var ch = document.getElementById("ck");
+    ch.onclick = function(){
+      popUp(this.href);
+      return false;
+    }
+    
+  }
+
+  
+  </script>
+</head>
+
+<body>
+<h1>Snapshots</h1>
+
+<ul id="imagegallery">
+  <li><a href="F:\HTML\1.jpg" title = "one">photo1</a>
+  <li><a href="F:\HTML\2.jpg" title = "two">photo2</a>
+  <li><a href="F:\HTML\3.jpg" title = "three">photo3</a>
+  <li><a href="F:\HTML\4.jpg" title = "four">photo4</a>
+</ul>
+<img id="placeholder" src="F:\HTML\5.jpg" alt="my image gallery"/>
+<a href = "http://www.billyh.cn/ziti.html"  id = "ck">windows</a>
+<p id = "description"> choose an image. </p>
+
+
+</body>
+</html>
