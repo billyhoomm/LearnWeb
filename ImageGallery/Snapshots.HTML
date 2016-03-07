@@ -14,9 +14,7 @@
     for( var i = 0; i<links.length; i++){
       links[i].onclick = function(){
         return showPic(this);
-        
       }
-      
     }
   }
   function showPic(whichpic) {
@@ -30,9 +28,26 @@
   	description.firstChild.nodeValue = text;//利用nodeValue属性刷新P元素的文本内容
     return false;
   }
+  function preparePlaceholder(){
+    var placeholder = document.createElement("img");
+    placeholder.setAttribute("id", "placeholder");
+    placeholder.setAttribute("src", "5.jpg");
+    placeholder.setAttribute("alt", "my image gallery");
+    var description = document.createElement("p");
+    description.setAttribute("id", "description");
+    var desctext = document.createTextNode("Choose a image");
+    description.appendChild(desctext);
+    /*var ck = document.getElementById("ck");
+    body.insertBefore(palceholder, ck);
+    body.parentNode.insertBefore(description, ck);*/
+
+    document.body.appendChild(placeholder);
+    document.body.appendChild(description);
+  }
   window.onload = function(){
     prepareGallery();
     win();
+    preparePlaceholder();
   }
   /*window.onload = countBodyChildren;
     function countBodyChildren() {
@@ -64,10 +79,7 @@
   <li><a href="F:\HTML\3.jpg" title = "three">photo3</a>
   <li><a href="F:\HTML\4.jpg" title = "four">photo4</a>
 </ul>
-<img id="placeholder" src="F:\HTML\5.jpg" alt="my image gallery"/>
 <a href = "http://www.billyh.cn/ziti.html"  id = "ck">windows</a>
-<p id = "description"> choose an image. </p>
-
-
 </body>
-</html>
+</html>                         
+
