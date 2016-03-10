@@ -47,5 +47,7 @@ function displayAbbreviations(){
 		header.appendChild(header_text);//为h2建立标题
 		document.body.appendChild(header);//在body下建立h2
 		document.body.appendChild(dlist);//在body下建立dlist
+		header.style.marginLeft = "44%";
+		dlist.style.marginLeft = "44%";
 		
 }
