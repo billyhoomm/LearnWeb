@@ -1,0 +1,108 @@
+body {
+  color: #fb5;
+  background-color: #334;
+  font-size: 76%;
+  font-family: "Helvetica","Arial",sans-serif;
+}
+body * {
+  font-size: 1em;
+}
+a {
+  font-weight: bold;
+  text-decoration: none;
+}
+#header {
+  color: #ec8;
+  background-color: #334;
+  border-color: #667;
+}
+#navigation {
+  color: #455;
+  background-color: #789;
+  border-color: #667;
+  font-family: "Lucida Grande","Helvetica","Arial",sans-serif;
+}
+#navigation a {
+  text-decoration: none;
+  font-weight: bold;
+}
+#content {
+  color: #223;
+  background-color: #edc;
+  border-color: #667;
+}
+#content p {
+  margin: 1em 0;
+}
+#navigation ul {
+  border-color: #99a;
+}
+#navigation a:link,#navigation a:visited {
+  color: #eef;
+  background-color: transparent;
+  border-color: #99a;
+}
+#navigation a:hover {
+  color: #445;
+  background-color: #eb6;
+}
+#navigation a:active {
+  color: #667;
+  background-color: #ec8;
+}
+#navigation a.here:link,
+#navigation a.here:visited,
+#navigation a.here:hover,
+#navigation a.here:active {
+  color: #eef;
+  background-color: #799;
+}/*配合JS应用于windows当前页面的链接，让其高亮显示。*/
+#content img {
+  border-color: #ba9;
+  outline-color: #dcb;
+}
+#imagegallery li {
+  list-style-type: none;
+}
+#imagegallery a {
+  background-color: transparent;
+}
+th {
+  color: #edc;
+  background-color: #455;
+}
+tr td {
+  color: #223;
+  background-color: #eb6;
+}
+tr.odd td {
+  color: #223;
+  background-color: #ec8;
+}
+tr.highlight td {
+  color: #223;
+  background-color: #cba;
+}
+dt {
+  margin-right: 1em;
+}
+dd {
+  margin-right: 3em;
+}
+h1 {
+  font-family: "Georgia","Times New Roman",sans-serif;
+  font: 2.4em normal;
+}
+h2 {
+  font-family: "Georgia","Times New Roman",sans-serif;
+  font: 1.8em normal;
+  margin-top: 1em;
+}
+h3 {
+  font-family: "Georgia","Times New Roman",sans-serif;
+  font: 1.4em normal;
+  margin-top: 1em;
+}
+textarea {
+  font-family: "Helvetica","Arial",sans-serif;
+}
