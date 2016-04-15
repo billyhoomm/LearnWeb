@@ -106,3 +106,17 @@ h3 {
 textarea {
   font-family: "Helvetica","Arial",sans-serif;
 }
+#intro a:hover, #intro a:link{
+  color: #445;
+  background-color: #eb6;
+  border-color: #99a;
+}
+#content a:link, #content a:hover{
+  color: #445;
+  background-color: #eb6;
+  border-color: #99a;
+}
+#content a:visited{
+  color: #eef;
+  background-color: transparent;
+  border-color: #99a;
