@@ -1,0 +1,346 @@
+body, html, h1, h2, h3, h4, h5, h6, ul, p { /*去除一些自带元素的默认样式*/
+            padding: 0;                             /*为了不影响内部元素需要清除margin和padding*/
+            margin: 0;
+        }
+
+        /*初始化属性*/
+        body {
+            min-width: 1024px;
+            font-family: "Myriad Set Pro", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+            color: #444;
+            font-size: 12px;
+        }
+        ul{
+            list-style: none;
+        }
+        a {text-decoration: none; }/*a自带了下划线，一般去掉*/
+
+        a.link {color: #08c !important; }/*给a元素增加可复用的属性类，在html直接加上就可以了*/
+        a.under:hover {text-decoration: underline; }/*增加可复用的下划线hover效果。*/
+
+        /*决定页面内容宽度的容器，非常重要，可以决定导航栏、页头、内容及页脚的宽度，对后期响应式改造起到决定性的作用*/
+        .container {
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            width: 1024px;
+            margin: 0 auto;
+        }
+
+        @media all and (max-width: 1024px) {
+            body {min-width: 320px; }
+            .container {width: 100%; }
+        }
+
+        /*清除浮动的技巧类*/
+        .clearfix:after {
+            content: " ";
+            display: block;
+            visibility: hidden;
+            clear: both;
+            height: 1%;
+        }
+
+
+        /*========================导航栏==================*/
+        .nav {
+            width: 100%;
+            height: 44px;
+            background: rgba(0, 0, 0, 0.8);
+            font-size: 14px;
+        }
+
+        /*手机版导航*/
+        .nav .mobile-menu {
+            display: none;
+            text-align: center;
+        }/*默认情况下不显示*/
+
+        .nav .mobile-menu a {
+            display: inline-block;
+            width: 44px;
+            height: 44px;
+            -webkit-transition: opacity 0.2s ease;
+            -moz-transition: opacity 0.2s ease;
+            -ms-transition: opacity 0.2s ease;
+            -o-transition: opacity 0.2s ease;
+            transition: opacity 0.2s ease;
+        }
+
+        .nav .mobile-menu .btn-menu {
+            font-size: 30px;
+            color: #fff;
+            line-height: 44px;
+        }
+
+        .nav .mobile-menu .nav-left {float: left; }
+        .nav .mobile-menu .nav-right {float: right;}
+
+        /*桌面版导航*/
+        .nav .menu {
+            display: table;
+            table-layout: fixed;
+        }
+        .nav .menu.show {display: block; }
+        .nav .menu a {
+            display: table-cell;
+            height: 44px;
+            margin: 0 10px;
+            vertical-align: middle;
+            color: #fff;
+            text-align: center;
+            -webkit-transition: opacity 0.2s ease;
+            -moz-transition: opacity 0.2s ease;
+            -ms-transition: opacity 0.2s ease;
+            -o-transition: opacity 0.2s ease;
+            transition: opacity 0.2s ease;
+        }
+        .nav a:hover {opacity: 0.65; }
+
+
+        /*识别小屏幕设备的导航变化*/
+        @media screen and (max-width: 768px) {
+            .nav .mobile-menu {display: block; }
+            .nav .menu {
+                display: none;
+                position: absolute;
+                top: 44px;
+                padding: 0 20px;
+                background: #000;
+            }
+
+            .nav .menu a {
+                display: block;
+                text-align: left;
+                line-height: 44px;
+                border-bottom: 1px solid #666;
+            }
+
+            .nav .menu a:first-child, .nav .menu a:last-child {display: none; }
+        }/*将原来的桌面版导航变成竖直列表模式并隐藏，用JS添加一个show类，当点击事件发生则menu菜单出现*/
+
+
+
+        /*=========================页头============================*/
+
+        .header {background: #fff; }
+        .header .banner {
+            margin: 0 auto;
+            height: 650px;
+        }
+
+        .header .banner .large-img {
+            display: block;
+            float: left;
+            margin: 20px;
+        }
+
+        .header .banner .intro {
+            display: table;
+            float: left;
+            margin-left: 40px;
+            height: 650px;
+        }
+
+        .header .banner .info {
+            display: table-cell;
+            vertical-align: middle;
+            text-align: center;
+        }
+
+        .header .banner .info h2 {
+            margin: 20px 0;
+            font-size: 32px;
+            font-weight: normal;
+        }
+
+        .header .banner .info a {
+            display: inline-block;
+            margin-right: 20px;
+            color: #08c;
+            font-size: 18px;
+        }
+
+        .header .banner .info a:hover {color: #000; }
+        @media screen and (max-width: 980px) {
+            .header .banner {
+                padding: 50px 0;
+                height: auto;
+                text-align: center;
+            }
+
+            .header .banner .large-img {
+                display: inline-block;
+                float: none;
+                width: 200px;
+            }
+
+            .header .banner .intro {
+                display: inline-block;
+                float: none;
+                margin-top: 90px;
+                width: 300px;
+                height: auto;
+                vertical-align: top;
+            }
+
+            .header .banner .intro img {width: 200px; }
+            .header .banner .info h2 {font-size: 20px; }
+            .header .banner .info a {font-size: 14px; }
+        }
+
+        @media screen and (max-width: 768px) {
+            .header .banner .large-img {width: 100px; }
+            .header .banner .intro {
+                margin: 0;
+                width: 300px;
+                vertical-align: baseline;
+            }
+
+            .header .banner .intro img {width: 150px; }
+        }
+
+
+
+        /*====================================内容区域===========================*/
+        .section {
+            background: #fff
+        }
+        .section .products li {
+            float: left;
+            width: 25%;
+        }
+
+        .section .products li .item {
+            display: block;
+            width: 100%;
+            height: 200px;
+            background-repeat: no-repeat;
+            background-position: center;
+            border-right: 2px solid #fff;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+        @media screen and (max-width: 980px) {
+            .section .products li {width: 50%;}
+            .section .products li .item{border-right: 3px solid #CDC6C6;
+            border-radius: 3px;
+            }
+        }
+
+        .section .products li .item.No1 {background-image: url('images/watch_large.jpg') }
+        .section .products li .item.No2 {background-image: url('images/ipad_pro_large.jpg') }
+        .section .products li .item.No3 {background-image: url('images/accessories_large.jpg') }
+        .section .products li .item.No4 {background-image: url('images/customer_letter_large.jpg');
+        border-right: 0;
+        }
+
+        .section .exchange {
+            margin: 0 auto;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .section .exchange a {color: #08c; }
+        .section .exchange a:hover {text-decoration: underline; }
+
+
+        /*============================================页脚及列表导航=========================*/
+        .footer {
+            background: #f2f2f2;
+            padding: 30px 20px;
+            color: #999;
+        }
+
+        .footer a {color: #666; }
+        .footer .footer-nav .column {
+            float: left;
+            width: 20%;
+        }
+
+        .footer .footer-nav .column li {
+            padding: 5px 0;
+            font-size: 12px;
+        }
+
+        .footer .footer-nav .column li a:hover {text-decoration: underline; }
+        .footer .footer-nav .column .label {
+            margin: 0;
+            padding: 5px 0;
+            font-weight: bold;
+            color: #333;
+        }
+
+
+        .footer .footer-nav .column .label.mar-top {margin-top: 20px; }
+
+        @media screen and (max-width: 768px) {
+            .footer {
+                padding: 20px;
+                height: auto;
+            }
+
+            .footer .footer-nav .column {
+                width: 100%;
+                -webkit-box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                box-sizing: border-box;
+            }
+
+            .footer .footer-nav .column .label {
+                height: 30px;
+                border-bottom: 1px solid #ddd;
+                font-weight: normal;
+                font-size: 14px;
+                line-height: 30px;
+                cursor: pointer;
+            }
+
+            .footer .footer-nav .column .label.mar-top {margin-top: 0; }
+            .footer .footer-nav .column ul {display: none; }
+            .footer .footer-nav .column ul.show {display: block; }
+            .footer .footer-nav .column ul a {
+                display: block;
+                width: 100%;
+                padding: 5px;
+            }
+        }
+
+        /*底部版权*/
+        .footer .shoplink {
+            padding: 10px 0;
+            border-bottom: 1px solid #e3e3e3;
+            margin-bottom: 10px;
+        }
+
+        .footer .legal .copyright {
+            float: left;
+            margin-right: 20px;
+        }
+
+        .footer .legal .legal-link {float: left; }
+        .footer .legal .legal-link a {
+            display: inline-block;
+            border-right: 1px solid #d6d6d6;
+            padding: 0 10px;
+        }
+
+        .footer .legal .legal-link a:last-child {border: none; }
+        .footer .locale {float: right; }
+        .footer .locale img {float: left; }
+        .footer .locale a {
+            vertical-align: middle;
+            margin-left: 3px;
+        }
+
+        @media screen and (max-width: 768px) {
+            .footer .legal .legal-link {
+                width: 100%;
+                margin: 10px 0;
+                line-height: 25px;
+            }
+
+            .footer .locale {float: left; }
+        }
