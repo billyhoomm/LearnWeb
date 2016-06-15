@@ -8,7 +8,7 @@ $(function(){
 	$imgrolls.mouseover(function(){
 		index = $imgrolls.index(this);
 		showImg(index);
-	}).eq(0).mouseover();	
+	}).eq(0).mouseover();
 	//滑入 停止动画，滑出开始动画.
 	$('#jnImageroll').hover(function(){
 			if(adTimer){ 
