@@ -12,9 +12,11 @@
 }
 #header .logo { 
     float:left; 
-    margin:0 0 0 10px; 
-    color:#FFF; 
+    margin:0px;
     line-height:80px;
+}
+#header .logo img{
+    border-radius: 9px 9px 0px 0px;
 }
 #header .search {
     left: 198px;
