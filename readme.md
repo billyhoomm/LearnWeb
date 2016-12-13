@@ -11,9 +11,11 @@
 - DOM、Ajax、$.load页面菜单模块切换：jquery
 - MVVM、通用菜单组件、小模块切换：Vue2.0
 - 富文本框：UEditor
+
 **特性**
 - 利用jquery的$.load实现大菜单模块异步切换
 - 混合使用Vue和jquery：jquery实现异步和零碎操作，Vue处理数据展示交互、组件切换、动画（完全可以使用Vue-resource代替$.ajax）
+
 **总结**
 - 在数据处理量比较大的网站中Vue代替jquery是极佳做法
 #### Javascript DOM编程艺术一书的最后案例
