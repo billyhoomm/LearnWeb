@@ -22,7 +22,6 @@ Vue2.0开发的CMS发布内容展示网站
 
 Javascript DOM编程艺术一书的最后案例
 ---
-***
 - 原生DOM和原生JS动画
 
 慕课网Canvas教程的数字时钟
