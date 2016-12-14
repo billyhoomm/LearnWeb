@@ -1,12 +1,12 @@
-### 学习进步过程中的代码
+学习进步过程中的代码
+===
+Apple首页
 ---
-
-### Apple首页
 - 苹果官网首页的纯手写响应式demo
 - media-query
 
-### Vue2.0开发的CMS发布内容展示网站
-- - - - - - - - - -
+Vue2.0开发的CMS发布内容展示网站
+---
 **技术栈**
 - CSS框架：bootstrap
 - DOM、Ajax、$.load页面菜单模块切换：jquery
@@ -20,15 +20,16 @@
 **总结**
 - 在数据处理量比较大的网站中Vue代替jquery是极佳做法
 
-### Javascript DOM编程艺术一书的最后案例
+Javascript DOM编程艺术一书的最后案例
+---
 ***
 - 原生DOM和原生JS动画
 
-### 慕课网Canvas教程的数字时钟
+慕课网Canvas教程的数字时钟
 ---
 - 原生JS
 
-### 锋利的jquery一书的最后案例
+锋利的jquery一书的最后案例
 ---
 - 手写轮播图，滑动显示，切换css实现主题颜色切换
 - validate验证插件，Jqzoom放大镜插件，jquery-cookie插件
