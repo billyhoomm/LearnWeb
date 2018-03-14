@@ -5,28 +5,23 @@ Apple首页
 - 苹果官网首页的纯手写响应式demo
 - media-query
 
-Vue2.0开发的CMS发布内容展示网站
+Web-Reader
 ---
-**技术栈**
-- CSS框架：bootstrap
-- DOM、Ajax、$.load页面菜单模块切换：jquery
-- MVVM、通用菜单组件、小模块切换：Vue2.0
-- 富文本框：UEditor
-
-**特性**
-- 利用jquery的$.load实现大菜单模块异步切换
-- 混合使用Vue和jquery：jquery实现异步和零碎操作，Vue处理数据展示交互、组件切换、动画（完全可以使用Vue-resource代替$.ajax）
-
-**总结**
-- 在数据处理量比较大的网站中Vue代替jquery是极佳做法
+- HTML5 移动Web App阅读器
+- 数据全部来源于data文件夹下,chapter.json为所有章节目录,其余为部分章节内容
+- data.json文件返回的是一串请求地址,文章内容数据由改地址请求得来
+- 由于要ajax请求本地文件,所以要在服务器环境运行
+- 一共4章内容,可以前后翻页
+- 可以改变字体大小，颜色，背景，字号，并存储在localstorage中，页面刷新不会改变这些以及当前章节相关设置
 
 Javascript DOM编程艺术一书的最后案例
 ---
-- 原生DOM和原生JS动画
+- 原生DOM操作和原生JS动画
 
 慕课网Canvas教程的数字时钟
 ---
 - 原生JS
+- canvas
 
 锋利的jquery一书的最后案例
 ---
