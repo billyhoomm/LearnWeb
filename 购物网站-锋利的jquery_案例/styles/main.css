@@ -419,6 +419,7 @@
     left: 5px;
     position: absolute;
     top: 0;
+    z-index:9;
 }
 #jnBrandContent li span {
     background-color: #EFEFEF;
